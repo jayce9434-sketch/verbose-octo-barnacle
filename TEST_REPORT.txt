@@ -1,0 +1,57 @@
+BUGBREAK UPDATE 1 — QA REPORT
+=============================
+
+Static validation
+- data.js: Node syntax PASS
+- audio.js: Node syntax PASS
+- ui.js: Node syntax PASS
+- game.js: Node syntax PASS
+- Every JavaScript-referenced UI element exists in index.html: PASS
+- Multiplayer/network.js/PeerJS dependency present: NO
+
+Content counts
+- Modes: 4
+- Playable bugs: 11
+- Regular enemies: 20
+- Boss1-Boss5 class enemies: 5
+- Normal Apex bosses: 10
+- Halloween bosses/final: 3
+- Harvest final bosses: 1
+- Permanent upgrades: 13
+- Halloween event upgrades: 4
+- Mutations: 28
+- Relics: 14
+- MP3 music tracks: 36
+- SFX WAV files: 14
+
+Browser QA harness
+- Main menu rendered: PASS (4 mode cards, 11 bug cards)
+- Upgrade shop rendered: PASS (13 permanent + 4 Halloween upgrades while event active)
+- Nightfall Hard Mode rendered: PASS
+- Hard boss spawn rendered: PASS
+- Halloween mode max wave count: 20 PASS
+- Halloween final boss: Hollow Queen on Wave 20 PASS
+- Boss5 class enemy spawn: Centipede Reaper PASS
+- Upgrade/mutation/relic evolution visuals rendered: PASS
+- Evolution HUD populated with mutation/relic names: PASS
+- Mobile viewport: 390 CSS px content width on 390 CSS px viewport; no horizontal overflow PASS
+- Browser page errors during clean QA pages: 0
+
+Hard Mode implementation
+- Regular enemy HP multiplier: 1.72x before wave scaling.
+- Regular enemy speed multiplier: 1.18x.
+- Regular enemy damage multiplier: 1.58x.
+- Boss HP multiplier: 1.72x.
+- Boss speed multiplier: 1.13x.
+- Boss damage multiplier: 1.52x.
+- Separate hard-night ambience and 10 hard boss themes are included.
+
+Halloween implementation
+- 20 waves.
+- Haunted biomes: Pumpkin Patch, Graveyard Garden, Haunted Greenhouse.
+- Pumpkin Widow on Wave 7.
+- Graveyard Mantis on Wave 14.
+- Hollow Queen final boss on Wave 20.
+- Candy Corn currency + haunted upgrade shop.
+- Beating the mode permanently unlocks Ghost Moth.
+- Event Candy and Halloween upgrade ranks are cleared after event expiry.
